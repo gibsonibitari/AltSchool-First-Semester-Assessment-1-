@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>First Semester Assessment 1 - Application Form | AltSchool Africa</title>
+</head>
+<body>
+
+  <header>
+    <h1>AltSchool Africa - School of Engineering</h1>
+    <p>First Semester Assessment 1</p>
+    <nav aria-label="Primary navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="form.html" aria-current="page">Application Form</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <section aria-labelledby="form-heading">
+      <h2 id="form-heading">Create Your AltSchool Africa Account</h2>
+      <p>
+        Fill in the details below to create an account, mirroring the
+        official
+        <a href="https://portal.altschoolafrica.com/auth/create-account">
+          AltSchool Africa account creation form
+        </a>.
+        Fields marked with an asterisk (<abbr title="required">*</abbr>)
+        are required.
+      </p>
+
+      <form action="#" method="post">
+
+        <fieldset>
+          <legend>Personal Information</legend>
+
+          <p>
+            <label for="firstName">First Name <abbr title="required">*</abbr></label><br>
+            <input type="text" id="firstName" name="firstName" autocomplete="given-name" required aria-required="true">
+          </p>
+
+          <p>
+            <label for="lastName">Last Name <abbr title="required">*</abbr></label><br>
+            <input type="text" id="lastName" name="lastName" autocomplete="family-name" required aria-required="true">
+          </p>
+
+          <p>
+            <label for="email">Email Address <abbr title="required">*</abbr></label><br>
+            <input type="email" id="email" name="email" autocomplete="email" required aria-required="true" aria-describedby="emailHint">
+            <br>
+            <small id="emailHint">We will send a verification link to this address.</small>
+          </p>
+
+          <p>
+            <label for="phone">Phone Number <abbr title="required">*</abbr></label><br>
+            <input type="tel" id="phone" name="phone" autocomplete="tel" required aria-required="true" aria-describedby="phoneHint">
+            <br>
+            <small id="phoneHint">Include your country code, e.g. +234</small>
+          </p>
+        </fieldset>
+
+        <fieldset>
+          <legend>Account Security</legend>
+
+          <p>
+            <label for="password">Password <abbr title="required">*</abbr></label><br>
+            <input type="password" id="password" name="password" autocomplete="new-password" required aria-required="true" minlength="8" aria-describedby="passwordHint">
+            <br>
+            <small id="passwordHint">Must be at least 8 characters long.</small>
+          </p>
+
+          <p>
+            <label for="confirmPassword">Confirm Password <abbr title="required">*</abbr></label><br>
+            <input type="password" id="confirmPassword" name="confirmPassword" autocomplete="new-password" required aria-required="true">
+          </p>
+        </fieldset>
+
+        <fieldset>
+          <legend>Additional Information</legend>
+
+          <p>
+            <label for="referral">How did you hear about AltSchool Africa?</label><br>
+            <select id="referral" name="referral">
+              <option value="">-- Please choose an option --</option>
+              <option value="social-media">Social Media</option>
+              <option value="friend">Friend or Colleague</option>
+              <option value="search-engine">Search Engine</option>
+              <option value="event">Event or Webinar</option>
+              <option value="other">Other</option>
+            </select>
+          </p>
+        </fieldset>
+
+        <fieldset>
+          <legend>Terms</legend>
+          <p>
+            <input type="checkbox" id="terms" name="terms" required aria-required="true">
+            <label for="terms">
+              I agree to the Terms of Service and Privacy Policy
+              <abbr title="required">*</abbr>
+            </label>
+          </p>
+        </fieldset>
+
+        <p>
+          <button type="submit">Create Account</button>
+          <button type="reset">Clear Form</button>
+        </p>
+
+      </form>
+    </section>
+
+  </main>
+
+  <footer>
+    <address>
+      Plot 9, Professor Gabriel Olusanya Street,<br>
+      Off White Sand School Road,<br>
+      Lekki, Lagos State, Nigeria
+    </address>
+
+    <section aria-labelledby="contact-heading">
+      <h2 id="contact-heading">Contact Information</h2>
+      <ul>
+        <li>Website: <a href="https://www.altschoolafrica.com/">AltSchool Africa</a></li>
+        <li>Support Email: <a href="mailto:support@altschoolafrica.com">support@altschoolafrica.com</a></li>
+        <li>Admissions Email: <a href="mailto:admissions@altschoolafrica.com">admissions@altschoolafrica.com</a></li>
+        <li>Phone: <a href="tel:+17372123187">+1 737 212 3187</a> / <a href="tel:+2347004921896">+234 700 4921 4896</a></li>
+      </ul>
+    </section>
+
+    <p>Designed by Ibitari Irimiagha</p>
+    <p>&copy; 2026 AltSchool Africa Student Project. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
