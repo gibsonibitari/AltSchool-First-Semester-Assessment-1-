@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modern Web Platform Features Workbench</title>
+
+  <style>
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      line-height: 1.5;
+      padding: 20px;
+      max-width: 850px;
+      margin: 0 auto;
+      background-color: #f8fafc;
+      color: #0f172a;
+    }
+
+    h1 {
+      color: #1e293b;
+      border-bottom: 2px solid #cbd5e1;
+      padding-bottom: 8px;
+    }
+
+    .card {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    }
+
+    .card h2 {
+      margin-top: 0;
+      font-size: 1.15rem;
+      color: #2563eb;
+    }
+
+    button, input[type="search"] {
+      padding: 8px 12px;
+      font-size: 0.9rem;
+      border-radius: 6px;
+      border: 1px solid #cbd5e1;
+    }
+
+    button {
+      background-color: #2563eb;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #1d4ed8;
+    }
+
+    .focus-toolbar {
+      display: flex;
+      gap: 8px;
+      padding: 10px;
+      background: #f1f5f9;
+      border-radius: 6px;
+    }
+
+    .focus-toolbar button {
+      background: #ffffff;
+      color: #0f172a;
+      border: 1px solid #94a3b8;
+    }
+
+    .focus-toolbar button:focus {
+      outline: 2px solid #2563eb;
+      background: #e0e7ff;
+    }
+
+    pre {
+      background: #0f172a;
+      color: #38bdf8;
+      padding: 12px;
+      border-radius: 6px;
+      overflow-x: auto;
+      font-size: 0.85rem;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Modern Web APIs & HTML Standard Workbench</h1>
+
+  <!-- 1. Semantic <search> Element -->
+  <section class="card">
+    <h2>1. Semantic Search Element (<code>&lt;search&gt;</code>)</h2>
+    <p>Provides a native landmark container for site search UI and filtering controls:</p>
+    
+    <search role="search">
+      <form action="/search" method="get" onsubmit="event.preventDefault();">
+        <label for="site-search">Search Documentation:</label>
+        <input type="search" id="site-search" name="q" placeholder="Search keywords...">
+        <button type="submit">Search</button>
+      </form>
+    </search>
+  </section>
+
+  <!-- 2. Native Focusgroup Navigation -->
+  <section class="card">
+    <h2>2. Arrow Key Keyboard Navigation (<code>focusgroup</code>)</h2>
+    <p>Uses the <code>focusgroup="wrap horizontal"</code> attribute for native arrow-key focus cycling across items:</p>
+    
+    <div class="focus-toolbar" focusgroup="wrap horizontal">
+      <button>Action One</button>
+      <button>Action Two</button>
+      <button>Action Three</button>
+      <button>Action Four</button>
+    </div>
+  </section>
+
+  <!-- 3. Intl.Segmenter API -->
+  <section class="card">
+    <h2>3. Text Segmentation API (<code>Intl.Segmenter</code>)</h2>
+    <p>Splits locale text accurately by user-perceived words or graphemes without regular expressions:</p>
+    
+    <button id="btn-segment">Segment Japanese & English Text</button>
+    <pre id="segment-output">Click button to run Intl.Segmenter processing...</pre>
+  </section>
+
+  <!-- 4. Document.parseHTMLUnsafe() -->
+  <section class="card">
+    <h2>4. Unsafe HTML Parsing (<code>Document.parseHTMLUnsafe()</code>)</h2>
+    <p>Parses an HTML string containing Declarative Shadow Roots into a detached <code>Document</code> object:</p>
+    
+    <button id="btn-parse-html">Run <code>Document.parseHTMLUnsafe()</code></button>
+    <pre id="parse-output">Click button to parse template...</pre>
+  </section>
+
+  <script>
+    // 1. Intl.Segmenter Demonstration
+    document.getElementById('btn-segment').addEventListener('click', () => {
+      const output = document.getElementById('segment-output');
+      
+      if (typeof Intl !== 'undefined' && Intl.Segmenter) {
+        // Word segmentation for Japanese text
+        const textJA = "プログラミング言語";
+        const segmenterJA = new Intl.Segmenter("ja", { granularity: "word" });
+        const segmentsJA = Array.from(segmenterJA.segment(textJA)).map(s => s.segment);
+
+        // Word segmentation for English text
+        const textEN = "Full-stack web application development";
+        const segmenterEN = new Intl.Segmenter("en", { granularity: "word" });
+        const segmentsEN = Array.from(segmenterEN.segment(textEN))
+          .filter(s => s.isWordLike)
+          .map(s => s.segment);
+
+        output.textContent = `Japanese Text: "${textJA}"\nWords: [ ${segmentsJA.join(' | ')} ]\n\nEnglish Words: [ ${segmentsEN.join(' | ')} ]`;
+      } else {
+        output.textContent = 'Intl.Segmenter is not supported in this browser version.';
+      }
+    });
+
+    // 2. Document.parseHTMLUnsafe Demonstration
+    document.getElementById('btn-parse-html').addEventListener('click', () => {
+      const output = document.getElementById('parse-output');
+      
+      const rawHTML = `
+        <div id="wrapper">
+          <template shadowrootmode="open">
+            <style>p { color: green; }</style>
+            <p>Declarative Shadow Root Content</p>
+          </template>
+        </div>
+      `;
+
+      if (typeof Document.parseHTMLUnsafe === 'function') {
+        const doc = Document.parseHTMLUnsafe(rawHTML);
+        const wrapper = doc.querySelector('#wrapper');
+        
+        output.textContent = `Document parsed successfully.\nRoot Element: <${doc.documentElement.nodeName}>\nChild Nodes: ${wrapper.childNodes.length}\nDeclarative Shadow Root Attached: ${wrapper.shadowRoot ? 'Yes' : 'No'}`;
+      } else {
+        output.textContent = 'Document.parseHTMLUnsafe() is not supported in this browser version.';
+      }
+    });
+  </script>
+
+  <!-- 5. Module Import Attributes (HTML/JSON Modules Reference) -->
+  <script type="module">
+    // Syntax Reference for JSON / HTML Modules:
+    // import data from "./config.json" with { type: 'json' };
+    // import { Component } from "./component.html" with { type: 'html' };
+  </script>
+
+</body>
+</html>

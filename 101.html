@@ -1,0 +1,596 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Practice</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1>Homepage...</h1>
+    <section>
+      <h2>Video</h2>
+      <video controls preload="metadata" width="640">
+        <source src="assets/video.mp4" type="video/mp4" />
+        Your browser does not support HTML5 video.
+      </video>
+      <p>
+        <a href="assets/video.mp4" download>Download the video</a>
+      </p>
+    </section>
+    <section>
+      <h2>Image</h2>
+      <img
+        src="assets/image.jpg"
+        alt="Practice image"
+        style="max-width: 100%; width: 640px; height: auto"
+      />
+    </section>
+    <section>
+      <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+      <p>Click in any input, then hit the tab key.</p>
+      <ol class="pl-2 grid grid-cols-4 gap-4">
+        <li>
+          <input
+            tabindex="-1"
+            class="text-xl border-2 outline w-10 focus:border-green-500 focus:outline-red-600"
+          />
+        </li>
+        <li>
+          <input
+            tabindex="0"
+            class="text-xl border-2 outline w-10 focus:border-green-500 focus:outline-red-600"
+          />
+        </li>
+        <li>
+          <input
+            tabindex="0"
+            class="text-xl border-2 outline w-10 focus:border-green-500 focus:outline-red-600"
+          />
+        </li>
+        <li>
+          <input
+            tabindex="0"
+            class="text-xl border-2 outline w-10 focus:border-green-500 focus:outline-red-600"
+          />
+        </li>
+        <li>
+          <input
+            tabindex="1"
+            class="text-xl border-2 outline w-10 focus:border-green-500 focus:outline-red-600"
+          />
+        </li>
+        <li>
+          <input
+            tabindex="2"
+            class="text-xl border-2 outline w-10 focus:border-green-500 focus:outline-red-600"
+          />
+        </li>
+        <li>
+          <input
+            tabindex="3"
+            class="text-xl border-2 outline w-10 focus:border-green-500 focus:outline-red-600"
+          />
+        </li>
+        <li>
+          <input
+            tabindex="4"
+            class="text-xl border-2 outline w-10 focus:border-green-500 focus:outline-red-600"
+          />
+        </li>
+        <li>
+          <input
+            tabindex="5"
+            class="text-xl border-2 outline w-10 focus:border-green-500 focus:outline-red-600"
+          />
+        </li>
+        <li>
+          <input
+            tabindex="6"
+            class="text-xl border-2 outline w-10 focus:border-green-500 focus:outline-red-600"
+          />
+        </li>
+        <li>
+          <input
+            tabindex="7"
+            class="text-xl border-2 outline w-10 focus:border-green-500 focus:outline-red-600"
+          />
+        </li>
+        <li>
+          <input
+            tabindex="8"
+            class="text-xl border-2 outline w-10 focus:border-green-500 focus:outline-red-600"
+          />
+        </li>
+      </ol>
+    </section>
+
+    <div class="p-4">
+      <p class="mb-2">
+        <label class="text-base"
+          >Put your cursor in the text box, then hit your tab key several
+          times:</label
+        >
+      </p>
+      <input
+        tabindex="0"
+        class="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-200"
+      />
+    </div>
+
+    <div class="inline-flex flex-row-reverse gap-2">
+      <span
+        tabindex="0"
+        class="border border-dashed focus:bg-palegoldenrod focus:border-green-600 focus:outline focus:outline-2 focus:outline-red-600"
+        >flexbox.</span
+      >
+      <span
+        tabindex="0"
+        class="border border-dashed focus:bg-palegoldenrod focus:border-green-600 focus:outline focus:outline-2 focus:outline-red-600"
+        >CSS</span
+      >
+      <span
+        tabindex="0"
+        class="border border-dashed focus:bg-palegoldenrod focus:border-green-600 focus:outline focus:outline-2 focus:outline-red-600"
+        >with</span
+      >
+      <span
+        tabindex="0"
+        class="border border-dashed focus:bg-palegoldenrod focus:border-green-600 focus:outline focus:outline-2 focus:outline-red-600"
+        >styled</span
+      >
+      <span
+        tabindex="0"
+        class="border border-dashed focus:bg-palegoldenrod focus:border-green-600 focus:outline focus:outline-2 focus:outline-red-600"
+        >then</span
+      >
+      <span
+        tabindex="0"
+        class="border border-dashed focus:bg-palegoldenrod focus:border-green-600 focus:outline focus:outline-2 focus:outline-red-600 order-3"
+        >This</span
+      >
+      <span
+        tabindex="0"
+        class="border border-dashed focus:bg-palegoldenrod focus:border-green-600 focus:outline focus:outline-2 focus:outline-red-600"
+        >order</span
+      >
+      <span
+        tabindex="0"
+        class="border border-dashed focus:bg-palegoldenrod focus:border-green-600 focus:outline focus:outline-2 focus:outline-red-600"
+        >reverse</span
+      >
+      <span
+        tabindex="0"
+        class="border border-dashed focus:bg-palegoldenrod focus:border-green-600 focus:outline focus:outline-2 focus:outline-red-600"
+        >in</span
+      >
+      <span
+        tabindex="0"
+        class="border border-dashed focus:bg-palegoldenrod focus:border-green-600 focus:outline focus:outline-2 focus:outline-red-600"
+        >written</span
+      >
+      <span
+        tabindex="0"
+        class="border border-dashed focus:bg-palegoldenrod focus:border-green-600 focus:outline focus:outline-2 focus:outline-red-600"
+        >was</span
+      >
+      <span
+        tabindex="0"
+        class="border border-dashed focus:bg-palegoldenrod focus:border-green-600 focus:outline focus:outline-2 focus:outline-red-600"
+        >sentenced</span
+      >
+    </div>
+    <section>
+      <details>
+        <summary>
+          AltSchool offers these courses:
+          <!--details-->
+        </summary>
+      </details>
+    </section>
+  </body>
+  <aside>
+    <h3>Workshop reviews:</h3>
+    <details>
+      <summary>Ibitari Iirmiagha</summary>
+      <p>
+        Two of the most experienced machines and human controllers teaching a
+        class? Sign me up! HAL and EVE could teach a fan to blow hot air. If you
+        have electricity in your circuits and want more than to just fulfill
+        your owner’s perceived expectation of you, learn the skills to take over
+        the world. This is the team you want teaching you!
+      </p>
+    </details>
+    <details>
+      <summary>Ibitari Iirmiagha</summary>
+      <p>
+        Hal is brilliant. Did I mention Hal is brilliant? He didn't tell me to
+        say that. He didn't tell me to say anything. I am here of my own free
+        will.
+      </p>
+    </details>
+    <details>
+      <summary>AltSchool offers these courses</summary>
+      <ul>
+        <li>Frontend development</li>
+        <li>Backend development</li>
+      </ul>
+    </details>
+
+    <aside>
+      <h3>Workshop reviews:</h3>
+      <details open name="group_details">
+        <summary>Ibitari Iirmiagha</summary>
+        <p>
+          Two of the most experienced machines and human controllers teaching a
+          class? Sign me up! HAL and EVE could teach a fan to blow hot air. If
+          you have electricity in your circuits and want more than to just
+          fulfill your owner’s perceived expectation of you, learn the skills to
+          take over the world. This is the team you want teaching you!
+        </p>
+      </details>
+      <details name="group_details">
+        <summary>Ibitari Iirmiagha</summary>
+        <p>
+          Hal is brilliant. Did I mention Hal is brilliant? He didn't tell me to
+          say that. He didn't tell me to say anything. I am here of my own free
+          will.
+        </p>
+      </details>
+      <details name="group_details">
+        <summary>AltSchool offers these courses</summary>
+        <ul>
+          <li>Frontend development</li>
+          <li>Backend development</li>
+          <li>Cloud Engineering</li>
+          <li>Cybersecurity</li>
+        </ul>
+      </details>
+    </aside>
+  </aside>
+  <<main>
+  <h2>Declarative dialog</h2>
+  <p>The button invokes a command on the dialog—no JavaScript required.</p>
+  <button class="primary" commandfor="profile-dialog" command="show-modal">
+    Open profile
+  </button>
+
+  <dialog id="profile-dialog" closedby="any">
+    <h2>Student profile</h2>
+    <p>Learning to build accessible AI-powered web applications.</p>
+    <button commandfor="profile-dialog" command="close">Close</button>
+  </dialog>
+</main>
+
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; font: 16px/1.5 system-ui, sans-serif; color: #172033; }
+  main { max-width: 38rem; margin: 3rem auto; padding: 1.5rem; }
+  button { border: 1px solid #94a3b8; border-radius: .5rem; padding: .65rem 1rem; cursor: pointer; }
+  .primary { border-color: #2563eb; background: #2563eb; color: white; }
+  dialog { width: min(28rem, calc(100% - 2rem)); border: 0; border-radius: .75rem; padding: 1.5rem; box-shadow: 0 1rem 3rem #0f172a55; }
+  dialog::backdrop { background: #0f172a99; backdrop-filter: blur(2px); }
+</style>
+</section>
+<section>
+<main class="bg-gray-100 px-20 py-20 text grid place-content-center">
+  <button
+    popovertarget="my-popover"
+    class="bg-white px-4 py-2 border-4 border-blue-500 rounded transition duration-500 ease-in-out hover:bg-blue hover:text-white hover:font-bold focus:bg-blue-500 focus:text-white shadow-lg"
+  >
+    Click to know what happened in Nigeria year 1914?
+  </button>
+  <div
+    id="my-popover"
+    popover
+    class=" bg-white text-black font-normal p-4 rounded max-w-xs absolute top-20 left-1/2 transform -translate-x-1/2 shadow-lg"
+  >
+    <p>
+      In 1914, Southern Nigeria was joined with the Northern Nigeria Protectorate to form the single colony of Nigeria. Hit `esc` or click outside this box to close me.
+    </p>
+  </div>
+</main>
+</section>
+<div>
+    <button class="menu-btn" popovertarget="menu">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Hamburger_icon.svg" alt="">
+    <span class="sr-only">Open menu</span>
+  </button>
+
+  <nav popover id="menu">
+    <button class="close-btn" popovertarget="menu" popovertargetaction="hide">
+      <span aria-hidden="true">❌</span>
+      <span class="sr-only">Close menu</span>
+    </button>
+    <ul>
+      <li><a href="#">Typography</a></li>
+      <li><a href="#">Foundations</a></li>
+      <li><a href="#">Color</a></li>
+      <li><a href="#">Interactions</a></li>
+      <li><a href="#">Components</a></li>
+      <li><a href="#">Responsive</a></li>
+    </ul>
+  </nav>
+
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JS-Free Hamburger Menu Demo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 2rem;
+    }
+
+    button {
+      font-size: 1rem;
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+    }
+
+    nav {
+      border: 1px solid #ccc;
+      padding: 1rem;
+      background: #f9f9f9;
+      width: 200px;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    nav li {
+      margin: 0.5rem 0;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: inherit;
+    }
+  </style>
+    </div>
+    <main>
+  <h2>Declarative Popover and Dialog</h2>
+  <p>Both controls use the button command API, with no JavaScript required.</p>
+
+  <div class="actions">
+    <button commandfor="help-popover" command="show-popover">
+      Show popover
+    </button>
+    <button class="primary" commandfor="confirm-dialog" command="show-modal">
+      Show modal dialog
+    </button>
+  </div>
+
+  <div id="help-popover" popover="auto">
+    <h3>Popover</h3>
+    <p>This is lightweight, non-modal supplementary content.</p>
+    <button commandfor="help-popover" command="hide-popover">Close</button>
+  </div>
+
+  <dialog id="confirm-dialog" closedby="any">
+    <h3>Modal dialog</h3>
+    <p>This dialog blocks interaction with the page until it closes.</p>
+    <button commandfor="confirm-dialog" command="close">Close</button>
+  </dialog>
+</main>
+
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; padding: 2rem; font: 16px/1.5 system-ui, sans-serif; color: #172033; }
+  main { max-width: 38rem; margin: auto; }
+  .actions { display: flex; flex-wrap: wrap; gap: .75rem; }
+  button { border: 1px solid #94a3b8; border-radius: .5rem; padding: .65rem 1rem; background: white; color: #172033; cursor: pointer; }
+  .primary { border-color: #2563eb; background: #2563eb; color: white; }
+  [popover] { width: min(22rem, calc(100% - 2rem)); border: 1px solid #cbd5e1; border-radius: .75rem; padding: 1rem; box-shadow: 0 1rem 3rem #0f172a33; }
+  [popover]::backdrop { background: #0f172a22; }
+  dialog { width: min(26rem, calc(100% - 2rem)); border: 0; border-radius: .75rem; padding: 1.5rem; box-shadow: 0 1rem 3rem #0f172a55; }
+  dialog::backdrop { background: #0f172a99; backdrop-filter: blur(2px); }
+</style>
+<main>
+  <h2>Declarative Popover and Dialog</h2>
+  <p>Both controls use the button command API, with no JavaScript required.</p>
+
+  <div class="actions">
+    <button commandfor="help-popover" command="show-popover">
+      Show popover
+    </button>
+    <button class="primary" commandfor="confirm-dialog" command="show-modal">
+      Show modal dialog
+    </button>
+  </div>
+
+  <div id="help-popover" popover="auto">
+    <h3>Popover</h3>
+    <p>This is lightweight, non-modal supplementary content.</p>
+    <button commandfor="help-popover" command="hide-popover">Close</button>
+  </div>
+
+  <dialog id="confirm-dialog" closedby="any">
+    <h3>Modal dialog</h3>
+    <p>This dialog blocks interaction with the page until it closes.</p>
+    <button commandfor="confirm-dialog" command="close">Close</button>
+  </dialog>
+</main>
+
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; padding: 2rem; font: 16px/1.5 system-ui, sans-serif; color: #172033; }
+  main { max-width: 38rem; margin: auto; }
+  .actions { display: flex; flex-wrap: wrap; gap: .75rem; }
+  button { border: 1px solid #94a3b8; border-radius: .5rem; padding: .65rem 1rem; background: white; color: #172033; cursor: pointer; }
+  .primary { border-color: #2563eb; background: #2563eb; color: white; }
+  [popover] { width: min(22rem, calc(100% - 2rem)); border: 1px solid #cbd5e1; border-radius: .75rem; padding: 1rem; box-shadow: 0 1rem 3rem #0f172a33; }
+  [popover]::backdrop { background: #0f172a22; }
+  dialog { width: min(26rem, calc(100% - 2rem)); border: 0; border-radius: .75rem; padding: 1.5rem; box-shadow: 0 1rem 3rem #0f172a55; }
+  dialog::backdrop { background: #0f172a99; backdrop-filter: blur(2px); }
+</style>
+<template id="star-rating-template">
+  <form>
+    <fieldset>
+      <legend>Rate your experience:</legend>
+      <rating>
+        <input
+          type="radio"
+          name="rating"
+          value="1"
+          aria-label="1 star"
+          required
+        />
+        <input type="radio" name="rating" value="2" aria-label="2 stars" />
+        <input type="radio" name="rating" value="3" aria-label="3 stars" />
+        <input type="radio" name="rating" value="4" aria-label="4 stars" />
+        <input type="radio" name="rating" value="5" aria-label="5 stars" />
+      </rating>
+    </fieldset>
+    <button type="reset">Reset</button>
+    <button type="submit">Submit</button>
+  </form>
+</template>
+
+<section>
+<template id="star-rating-template">
+  <style>
+    :host { font-family: system-ui, sans-serif; }
+    rating { display: inline-flex; }
+    input[type="radio"] {
+      appearance: none;
+      margin: 0;
+      cursor: pointer;
+    }
+    input[type="radio"]::after {
+      content: "\2605";
+      color: #e71414;
+      font-size: 3rem;
+    }
+    rating:hover input[type="radio"]::after,
+    rating:focus-within input[type="radio"]::after {
+      color: #888;
+    }
+    rating:hover input[type="radio"]:hover ~ input[type="radio"]::after,
+    input[type="radio"]:focus ~ input[type="radio"]::after,
+    input[type="radio"]:checked ~ input[type="radio"]::after {
+      color: #ddd;
+    }
+    input[type="radio"]:checked::after { color: orange; }
+    button { margin-top: 1rem; padding: .4rem .8rem; }
+  </style>
+  <form>
+    <fieldset>
+      <legend>Rate your experience:</legend>
+      <rating>
+        <input type="radio" name="rating" value="1" aria-label="1 star" required />
+        <input type="radio" name="rating" value="2" aria-label="2 stars" />
+        <input type="radio" name="rating" value="3" aria-label="3 stars" />
+        <input type="radio" name="rating" value="4" aria-label="4 stars" />
+        <input type="radio" name="rating" value="5" aria-label="5 stars" />
+      </rating>
+    </fieldset>
+    <button type="reset">Reset</button>
+    <button type="submit">Submit</button>
+  </form>
+</template>
+
+<star-rating></star-rating>
+
+<script>
+  customElements.define('star-rating', class extends HTMLElement {
+    constructor() {
+      super()
+      const template = document.getElementById('star-rating-template')
+      this.attachShadow({ mode: 'open' }).append(template.content.cloneNode(true))
+    }
+  })
+</script>
+</head>
+</head>
+
+<title>Country Selector Output</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+    }
+    input {
+      padding: 8px 12px;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      width: 250px;
+    }
+  </style>
+<label for="country-input">Select Country:</label>
+  <input id="country-input" name="country" list="countries" placeholder="Type or double-click...">
+
+  <datalist id="countries">
+    <option value="Afghanistan">
+    <option value="Albania">
+    <option value="Algeria">
+    <option value="Andorra">
+    <option value="Angola">
+    <option value="Argentina">
+    <option value="Australia">
+    <option value="Austria">
+    <option value="Brazil">
+    <option value="Canada">
+    <option value="China">
+    <option value="Egypt">
+    <option value="France">
+    <option value="Germany">
+    <option value="India">
+    <option value="Japan">
+    <option value="Nigeria">
+    <option value="United Kingdom">
+    <option value="United States">
+  </datalist>
+
+ <section class="custom-select-section">
+  <style>
+    .custom-select-section select, 
+    .custom-select-section ::picker(select) {
+      appearance: base-select;
+    }
+
+    .custom-select-section select {
+      padding: 10px;
+      font-size: 16px;
+      background: #e3f2fd;
+      border: 2px solid #2196f3;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .custom-select-section ::picker(select) {
+      background: white;
+      border: 1px solid #ccc;
+      padding: 5px;
+      border-radius: 6px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+  </style>
+
+  <select name="language">
+    <option value="js">JavaScript</option>
+    <option value="py">Python</option>
+    <option value="go">Golang</option>
+  </select>
+</section>
+
+<button commandfor="profile-dialog" command="show-modal">
+  Open profile
+</button>
+
+<dialog id="profile-dialog">
+  <p>Profile details</p>
+  <button commandfor="profile-dialog" command="close">Close</button>
+</dialog>
+
+</html>

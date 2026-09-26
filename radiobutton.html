@@ -1,0 +1,53 @@
+<template id="star-rating-template">
+  <style>
+    :host { font-family: system-ui, sans-serif; }
+    rating { display: inline-flex; }
+    input[type="radio"] {
+      appearance: none;
+      margin: 0;
+      cursor: pointer;
+    }
+    input[type="radio"]::after {
+      content: "\2605";
+      color: #e71414;
+      font-size: 3rem;
+    }
+    rating:hover input[type="radio"]::after,
+    rating:focus-within input[type="radio"]::after {
+      color: #888;
+    }
+    rating:hover input[type="radio"]:hover ~ input[type="radio"]::after,
+    input[type="radio"]:focus ~ input[type="radio"]::after,
+    input[type="radio"]:checked ~ input[type="radio"]::after {
+      color: #ddd;
+    }
+    input[type="radio"]:checked::after { color: orange; }
+    button { margin-top: 1rem; padding: .4rem .8rem; }
+  </style>
+  <form>
+    <fieldset>
+      <legend>Rate your experience:</legend>
+      <rating>
+        <input type="radio" name="rating" value="1" aria-label="1 star" required />
+        <input type="radio" name="rating" value="2" aria-label="2 stars" />
+        <input type="radio" name="rating" value="3" aria-label="3 stars" />
+        <input type="radio" name="rating" value="4" aria-label="4 stars" />
+        <input type="radio" name="rating" value="5" aria-label="5 stars" />
+      </rating>
+    </fieldset>
+    <button type="reset">Reset</button>
+    <button type="submit">Submit</button>
+  </form>
+</template>
+
+<star-rating></star-rating>
+
+<script>
+  customElements.define('star-rating', class extends HTMLElement {
+    constructor() {
+      super()
+      const template = document.getElementById('star-rating-template')
+      this.attachShadow({ mode: 'open' }).append(template.content.cloneNode(true))
+    }
+  })
+</script>
