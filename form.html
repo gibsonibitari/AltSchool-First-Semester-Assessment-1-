@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Create account form modelled on the AltSchool Africa sign-up form.">
+  <meta name="author" content="Ibitari Irimiagha">
+  <title>Create Account | First Semester Assessment 1 | AltSchool Africa</title>
+</head>
+<body>
+
+  <a href="#main-content">Skip to main content</a>
+
+  <header>
+    <p>AltSchool Africa - School of Engineering</p>
+    <p>First Semester Assessment 1</p>
+    <nav aria-label="Global navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="form.html" aria-current="page">Application Form</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content">
+
+    <h1>Create Your AltSchool Africa Account</h1>
+    <p>
+      Fill in the details below to create an account. Fields marked
+      <strong>(required)</strong> must be completed.
+    </p>
+
+    <form action="#" method="post" aria-labelledby="form-title">
+      <h2 id="form-title">Account Registration</h2>
+
+      <fieldset>
+        <legend>Personal Information</legend>
+
+        <p>
+          <label for="first-name">First Name (required)</label>
+          <input type="text" id="first-name" name="first_name" autocomplete="given-name" required>
+        </p>
+
+        <p>
+          <label for="last-name">Last Name (required)</label>
+          <input type="text" id="last-name" name="last_name" autocomplete="family-name" required>
+        </p>
+
+        <p>
+          <label for="email">Email Address (required)</label>
+          <input type="email" id="email" name="email" autocomplete="email" required aria-describedby="email-hint">
+        </p>
+        <p id="email-hint"><small>Use a valid email address. Your admission updates will be sent here.</small></p>
+
+        <p>
+          <label for="phone">Phone Number (required)</label>
+          <input type="tel" id="phone" name="phone" autocomplete="tel" inputmode="tel" required aria-describedby="phone-hint">
+        </p>
+        <p id="phone-hint"><small>Include your country code, for example +234.</small></p>
+
+        <p>
+          <label for="country">Country (required)</label>
+          <select id="country" name="country" autocomplete="country-name" required>
+            <option value="">Select your country</option>
+            <option value="nigeria">Nigeria</option>
+            <option value="ghana">Ghana</option>
+            <option value="kenya">Kenya</option>
+            <option value="south-africa">South Africa</option>
+            <option value="uganda">Uganda</option>
+            <option value="tanzania">Tanzania</option>
+            <option value="rwanda">Rwanda</option>
+            <option value="other">Other</option>
+          </select>
+        </p>
+      </fieldset>
+
+      <fieldset>
+        <legend>Account Security</legend>
+
+        <p>
+          <label for="password">Password (required)</label>
+          <input type="password" id="password" name="password" autocomplete="new-password" minlength="8" required aria-describedby="password-hint">
+        </p>
+        <p id="password-hint"><small>Use at least 8 characters.</small></p>
+
+        <p>
+          <label for="confirm-password">Confirm Password (required)</label>
+          <input type="password" id="confirm-password" name="confirm_password" autocomplete="new-password" minlength="8" required>
+        </p>
+      </fieldset>
+
+      <fieldset>
+        <legend>How did you hear about us?</legend>
+        <p>
+          <label for="referral">Referral Source</label>
+          <select id="referral" name="referral">
+            <option value="">Select an option</option>
+            <option value="social-media">Social Media</option>
+            <option value="friend">Friend or Colleague</option>
+            <option value="search-engine">Search Engine</option>
+            <option value="event">Event or Webinar</option>
+            <option value="other">Other</option>
+          </select>
+        </p>
+      </fieldset>
+
+      <fieldset>
+        <legend>Terms and Conditions</legend>
+        <p>
+          <input type="checkbox" id="terms" name="terms" required>
+          <label for="terms">I agree to the Terms of Service and Privacy Policy (required)</label>
+        </p>
+      </fieldset>
+
+      <p>
+        <button type="submit">Create Account</button>
+        <button type="reset">Clear Form</button>
+      </p>
+    </form>
+
+  </main>
+
+  <footer>
+    <h2>Contact Address</h2>
+    <address>
+      E/W Road,<br>
+      Port Harcourt,<br>
+      Rivers State, Nigeria
+    </address>
+    <p>Designed by Ibitari Irimiagha</p>
+    <p><small>&copy; 2026 Ibitari Irimiagha. All rights reserved.</small></p>
+  </footer>
+
+</body>
+</html>

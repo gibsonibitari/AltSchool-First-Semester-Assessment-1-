@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="First Semester Assessment 1: a semantic, accessible HTML page for AltSchool Africa School of Engineering.">
+  <meta name="author" content="Ibitari Irimiagha">
+  <title>Home | First Semester Assessment 1 | AltSchool Africa</title>
+</head>
+<body>
+
+  <a href="#main-content">Skip to main content</a>
+
+  <header>
+    <p>AltSchool Africa - School of Engineering</p>
+    <p>First Semester Assessment 1</p>
+    <nav aria-label="Global navigation">
+      <ul>
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="form.html">Application Form</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content">
+
+    <h1>First Semester Assessment 1</h1>
+
+    <section aria-labelledby="intro-heading">
+      <h2 id="intro-heading">About This Assignment</h2>
+      <p>
+        This is my first HTML assignment for the AltSchool Africa School of
+        Engineering. It uses semantic elements such as <code>header</code>,
+        <code>nav</code>, <code>main</code>, <code>section</code>,
+        <code>article</code>, <code>aside</code> and <code>footer</code>
+        to build an accessible page without any CSS.
+      </p>
+    </section>
+
+    <section aria-labelledby="about-heading">
+      <h2 id="about-heading">About AltSchool Africa</h2>
+      <article>
+        <h3>School of Engineering</h3>
+        <p>
+          AltSchool Africa trains people across the continent for tech
+          careers through practical, project-based learning, starting with
+          foundations like HTML, CSS and JavaScript.
+        </p>
+      </article>
+      <aside aria-labelledby="fact-heading">
+        <h3 id="fact-heading">Did You Know?</h3>
+        <p>
+          Semantic HTML helps screen readers and search engines understand
+          the structure of a page.
+        </p>
+      </aside>
+    </section>
+
+    <section aria-labelledby="next-heading">
+      <h2 id="next-heading">Where to Go Next</h2>
+      <p>
+        Visit the <a href="form.html">Application Form</a> page to see the
+        account creation form.
+      </p>
+    </section>
+
+  </main>
+
+  <footer>
+    <h2>Contact Address</h2>
+    <address>
+      E/W Road,<br>
+      Port Harcourt,<br>
+      Rivers State, Nigeria
+    </address>
+    <p>Designed by Ibitari Irimiagha</p>
+    <p><small>&copy; 2026 Ibitari Irimiagha. All rights reserved.</small></p>
+  </footer>
+
+</body>
+</html>
